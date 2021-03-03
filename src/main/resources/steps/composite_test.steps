@@ -1,0 +1,26 @@
+Composite: When I check templates page
+When I click on element located `By.xpath(((//nav[@class='home-left-sidebar-container']//ul)[1]/*)[2])`
+When I wait `PT30S` with `PT10S` polling until element located `By.xpath(//*[@class='home-sticky-container'])` becomes VISIBLE
+When I ESTABLISH baseline with `base_2` ignoring:
+|ELEMENT                                   |
+|By.xpath(//div[@data-desktop-id="header"])|
+When I COMPARE_AGAINST baseline with `base_2` ignoring:
+|ELEMENT                                   |
+|By.xpath(//div[@data-desktop-id="header"])|
+
+Composite: When I check main page
+When I click on element located `By.xpath(((//nav[@class='home-left-sidebar-container']//ul)[1]/*)[3])`
+When I ESTABLISH baseline with `base_3`
+When I COMPARE_AGAINST baseline with `base_3`
+
+Composite: When I check team members page
+When I click on element located `By.xpath((//a[@data-test-id='home-team-members-tab']/ancestor::li)[2])`
+When I ESTABLISH baseline with `base_4`
+When I COMPARE_AGAINST baseline with `base_4`
+
+Composite: When I check create board page
+When I click on element located `By.xpath((//a[@href='/'])[1])`
+When I click on element located `By.xpath(((//nav[@class='home-left-sidebar-container']//ul)[1]/*)[1])`
+When I click on element located `By.xpath(//div[@class='board-tile mod-add'])`
+When I ESTABLISH baseline with `base_5`
+When I COMPARE_AGAINST baseline with `base_5`
