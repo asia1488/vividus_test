@@ -5,4 +5,4 @@ Given I am on the main application page
 
 Scenario: Verify page title
 Then the page title is equal to 'Vividus Test Site'
-
+When I COMPARE_AGAINST baseline with `name`
